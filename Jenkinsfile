@@ -7,10 +7,20 @@ pipeline {
 	// 		args '-v /root/.m2:/root/.m2'
 	// 	} 
 	// }
+
+	environment {
+		dockerHome = tool 'myDocker'
+		mavenHome = tool 'myMaven'
+		PATH = "$mavenHome/bin;$dockerHome/bin;$PATH"
+	}
+
+
 	stages {
 		stage ('Build') {
 			steps {
-				echo "Path = $PATH"
+				sh 'mvn --version'
+				sh 'docker --version'
+				echo "PATH = $PATH"
 				echo "BUILD NUMBER = $env.BUILD_NUMBER"
 				echo "BUILD_ID = $env.BUILD_ID"
 				echo "JOB_NAME = $env.JOB_NAME"
