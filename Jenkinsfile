@@ -15,16 +15,20 @@
 pipeline {
 	agent any
 	stages {
-		stage{
-			steps{
+		stage ('Build') {
+			steps {
 				echo "Build"
 			}
-			stage('Test') {
+		}
+		stage ('Test') {
+			steps {
 				echo "Test"
-			}
-			stage('Integration Test') {
+			}		
+		}
+		stage ('Integration Teset') { 
+			steps {
 				echo "Integration Test"
-			}
+			}			
 		}
 	}
 }
