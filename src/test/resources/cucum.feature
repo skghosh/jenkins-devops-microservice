@@ -8,4 +8,4 @@ Feature: Cucumber hello world example
     Examples:
       |	name	|	output		|
       |	World	|	Hello World	|
-      |	Ravi	|	Hello Ravi	|
+      |	Sandeep	|	Hello Sandeep	|
