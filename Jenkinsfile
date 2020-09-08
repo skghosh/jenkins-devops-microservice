@@ -51,7 +51,7 @@ pipeline {
 			steps {
 				//"docker build -t sandeepkghosh/currency-exchange-devops:$env.BUILD_TAG"
 				
-				def dockerImage = docker.build("sandeepkghosh/currency-exchange-devops:$(env.BUILD_ID)")
+				def dockerImage = docker.build("sandeepkghosh/currency-exchange-devops:$env.BUILD_ID")
 				
 			}			
 		}
